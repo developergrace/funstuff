@@ -1,0 +1,153 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+	margin: 0;
+    padding: 0;
+    height: 100%;
+    background: rgb(26,181,212);
+    background: radial-gradient(circle, rgba(26,181,212,1) 0%, rgba(178,224,235,1) 47%, rgba(26,181,212,1) 100%);
+    font-family: 'Roboto', sans-serif;
+}
+
+.border {
+    min-height: 100%;
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 3em;
+}
+
+header {
+	background-image: url('https://www.kitchenkneads.com/wp-content/uploads/2015/09/Peanuts-Blanched-Roasted-and-Salted-1000x1000.png');
+	background-repeat: repeat-x;
+	background-position: center;
+	height: 165px;
+}
+
+h1 {
+    color: #72392A;
+    text-shadow: -2px 2px 3px #F5B82B;
+    font-family: 'Sriracha', cursive;
+    text-align: center;
+    font-size: 2.7em;
+}
+
+main {
+    text-align: justify;
+    margin: 0 5%;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 2% auto;
+    min-width: 70%;
+}
+
+input, select, textarea {
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 1.1em;
+}
+
+label {
+    font-size: .9em;
+    color: #0e1111;
+}
+
+.check {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+.question {
+	display: flex;
+	flex-flow: column wrap;
+    min-width: 80%;
+}
+
+.buttons {
+    display: flex;
+	flex-flow: row wrap;
+    max-width: 100%;
+    align-content: center;
+    justify-content: space-between;
+
+}
+
+.hide_radio input {
+    /* position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0; */
+}
+
+.hide_radio {
+    margin: 1% 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #EA212D;
+    color: white;
+    position: relative;
+    font-size: 1em;
+    height: 30px !important;
+    width: 100% !important;
+    text-align: center;
+    font-family: 'Sriracha', cursive;
+    -webkit-transition: background-color .4s;
+    -moz-transition: background-color .4s;
+    -o-transition: background-color .4s;
+    transition: background-color .4s;
+}
+
+.data {
+	font-weight: bold;
+}
+
+:focus {
+    outline: none;
+}
+
+::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: .8em;
+}
+
+button {
+    background-color: #EA212D;
+    padding: 10px 30px;
+    border-radius: 30px;
+    color: white;
+    font-size: 1.4em;
+    font-family: 'Sriracha', cursive;
+    border: none;
+    box-shadow: none;
+    -webkit-transition: background-color .4s;
+    -moz-transition: background-color .4s;
+    -o-transition: background-color .4s;
+    transition: background-color .4s;
+}
+
+button:hover, .hide_radio:hover {
+    background-color: #ec5a38;
+}
+
+button:active {
+    background-color: #F5B82B;
+}
+
+
+
+@media screen and (min-width: 900px) {
+    .border {
+        width: 70%;
+    }
+    .hide_radio {
+        width: 18% !important;
+    }
+}
