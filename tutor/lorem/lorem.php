@@ -20,11 +20,11 @@
                     <label for="paragraph">Number of Paragraphs:</label>
                     <select name="paragraph" id="paragraph" required>
                         <?php for($x = 1; $x <= 10; $x++): ?>
-                        <option value="<?php echo $x; ?>" <?php echo $paragraph == $x ? 'selected' : null; ?>>
-                        <?php echo $x; ?>
-                        </option>
+                            <option value="<?php echo $x; ?>" <?php echo $paragraph == $x ? 'selected' : null; ?>>
+                                <?php echo $x; ?>
+                            </option>
                         <?php endfor; ?>
-                        </select>
+                    </select>
                     <button>Submit</button>
                 </form>
 

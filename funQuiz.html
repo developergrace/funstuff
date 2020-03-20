@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto&display=swap');
+
+        html {
+        cursor: url("https://cdn.discordapp.com/attachments/441025640939126787/446953173471461388/thinking.cur"), auto;
+        height: 100%;
+        }
+
+        body {
+        margin: 0;
+        background-color: purple;
+        background-image: url(https://pantheon.io/sites/default/files/field/image/900x540_Blog-Ad.png);
+        font-family: 'Roboto', sans-serif;
+        height: 100%;
+        }
+
+        main {
+        position: relative;
+        width: 80%;
+        min-height: 100%;
+        margin: 3% auto;
+        padding: 10px 20px;
+        background-color: white;
+        background-color: rgba(255,255,255,.8);
+        border-radius: 10px;	
+        }
+
+        h1 {
+        text-align: center;
+        font-family: 'Press Start 2P', cursive;
+        color: #262626;
+        font-size: 2.5em;
+        line-height: 55px;
+        text-shadow: -3px 3px 3px gray;
+        }
+
+        p {
+        text-align: justify;
+        margin: 0 auto;
+        }
+
+        .quizQ {
+        margin: 2% 1%;
+        }
+
+        input {
+        margin-top: 1%;
+        }
+
+        label {
+        display: block;
+        }
+
+        button {
+        position: relative;
+        margin: 0 auto;
+        display: block;
+        border: none;
+        background-color: darkcyan;
+        border-bottom: 3px solid #003f3f;
+        color: white;
+        padding: 20px;
+        border-radius: 50px;
+        font-size: 1.2em;
+        box-shadow: 0 3px darkgray;
+        transition: all 0.3s ease;
+        }
+
+        button:hover {
+        box-shadow: 0 0 darkslategray;
+        border-bottom: 1px solid #003f3f;
+        top: 3px;
+        }
+
+        button:focus {
+        outline: none;
+        }
+
+        button:active {
+        background-color: #45aaaa;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+    <h1 id="title">Totally Rad Personality Quiz</h1>
+    <p>Are you more like Claire or Allison? Brian or John? Grab your pals and answer these 5 zany questions. No cheating! Answer truthfully and this kooky quiz will tell you definitively which cool kids you sit with at lunch.</p>
+    
+    <form>
+        <div class="quizQ">
+            <p>1. A stranger introduces themselves to you, how do you react?</p>
+            <label><input type="radio" name="q1" class="q1">Friendly greeting</label>
+            <label><input type="radio" name="q1" class="q1">Courteous introduction</label>
+            <label><input type="radio" name="q1" class="q1">Walk away</label>
+        </div>
+        
+        <div class="quizQ">
+            <p>2. You've finished your meal but forgotten your wallet! What do you do?</p>
+            <label><input type="radio" name="q2">No biggie, that's what Venmo is for!</label>
+            <label><input type="radio" name="q2">Explain to the manager and sign an IOU.</label>
+            <label><input type="radio" name="q2">Dine & dash was invented for this.</label>
+        </div>
+        
+        <div class="quizQ">
+            <p>3. How would you describe your style?</p>
+            <label><input type="radio" name="q3">Style over comfort</label>
+            <label><input type="radio" name="q3">Depends on the situation</label>
+            <label><input type="radio" name="q3">Comfort over style</label>
+        </div>
+        
+        <div class="quizQ">
+            <p>4. Your friends want to watch a movie that you've already seen, BORING! Do you go?</p>
+            <label><input type="radio" name="q4">Of course! It'll be different watching with friends.</label>
+            <label><input type="radio" name="q4">Yeah but I'll suggest a different movie.</label>
+            <label><input type="radio" name="q4">No, I'll make up an excuse and watch something else at home.</label>
+        </div>
+        
+        <div class="quizQ">
+            <p>5. How would you describe your style?</p>
+            <label><input type="radio" name="q5">Comfort over style</label>
+            <label><input type="radio" name="q5">Depends on the situation</label>
+            <label><input type="radio" name="q5">Style over comfort</label>
+        </div>
+        
+    </form>
+    
+    <ul id="numbers" style="display:none">
+        <li>20+: </li>
+        <li>11-19: </li>
+        <li>5-10: </li>
+    </ul>
+
+    <p id="results">
+        
+    </p>
+
+    <button id="btn" onClick="test()">Take Quiz</button> 
+
+    </main>
+
+    <script>
+        function test() {
+            var title = document.getElementById("title");
+            var results = document.getElementById("results");
+            var btn = document.getElementById("btn");
+            var numbers = document.getElementById("numbers");
+            
+            if (numbers.style.display === "none") {
+                numbers.style.display = "block";
+            } else {
+                numbers.style.display = "none";
+            }
+            
+            if(title.innerHTML === "Totally Rad Personality Quiz") {
+                quiz();
+                title.innerHTML = "Results";
+            } else {
+                title.innerHTML = "Totally Rad Personality Quiz";
+            }
+            
+            if(btn.innerHTML === "Take Quiz") {
+                btn.innerHTML = "Retake Quiz";
+            } else {
+                btn.innerHTML = "Take Quiz";
+            }
+        }
+
+        function quiz() {
+            score = 0;
+            results.innerHTML = score;
+        }
+    </script>
+</body>
+</html>
